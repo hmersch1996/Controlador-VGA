@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=C:\Users\Hans\Desktop\VersionFinal\Driver_VGA.ncd
-OUTFILE=C:\Users\Hans\Desktop\VersionFinal\Driver_VGA.bit
-FAMILY=Spartan6
-PART=xc6slx9-3csg324
-WORKINGDIR=C:\Users\Hans\Desktop\VersionFinal
-LICENSE=WebPack
-USER_INFO=174169581_174169582_0_836
