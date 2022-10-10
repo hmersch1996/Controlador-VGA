@@ -1,0 +1,45 @@
+xst -intstyle ise -ifn "C:/Users/Hans-PC/Desktop/ProyectoSD1/VersionFinal/Driver_VGA.xst" -ofn "C:/Users/Hans-PC/Desktop/ProyectoSD1/VersionFinal/Driver_VGA.syr" 
+xst -intstyle ise -ifn "C:/Users/Hans-PC/Desktop/ProyectoSD1/VersionFinal/Driver_VGA.xst" -ofn "C:/Users/Hans-PC/Desktop/ProyectoSD1/VersionFinal/Driver_VGA.syr" 
+xst -intstyle ise -ifn "C:/Users/Hans-PC/Desktop/ProyectoSD1/VersionFinal/Driver_VGA.xst" -ofn "C:/Users/Hans-PC/Desktop/ProyectoSD1/VersionFinal/Driver_VGA.syr" 
+xst -intstyle ise -ifn "C:/Users/Hans-PC/Desktop/ProyectoSD1/VersionFinal/Driver_VGA.xst" -ofn "C:/Users/Hans-PC/Desktop/ProyectoSD1/VersionFinal/Driver_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Pines.ucf -p xc6slx9-csg324-3 Driver_VGA.ngc Driver_VGA.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Driver_VGA_map.ncd Driver_VGA.ngd Driver_VGA.pcf 
+par -w -intstyle ise -ol high -mt off Driver_VGA_map.ncd Driver_VGA.ncd Driver_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Driver_VGA.twx Driver_VGA.ncd -o Driver_VGA.twr Driver_VGA.pcf -ucf Pines.ucf 
+bitgen -intstyle ise -f Driver_VGA.ut Driver_VGA.ncd 
+xst -intstyle ise -ifn "C:/Users/pc/Downloads/VersionFinal/Driver_VGA.xst" -ofn "C:/Users/pc/Downloads/VersionFinal/Driver_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Pines.ucf -p xc6slx9-csg324-3 Driver_VGA.ngc Driver_VGA.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Driver_VGA_map.ncd Driver_VGA.ngd Driver_VGA.pcf 
+par -w -intstyle ise -ol high -mt off Driver_VGA_map.ncd Driver_VGA.ncd Driver_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Driver_VGA.twx Driver_VGA.ncd -o Driver_VGA.twr Driver_VGA.pcf -ucf Pines.ucf 
+bitgen -intstyle ise -f Driver_VGA.ut Driver_VGA.ncd 
+xst -intstyle ise -ifn "C:/Users/pc/Downloads/VersionFinal/Driver_VGA.xst" -ofn "C:/Users/pc/Downloads/VersionFinal/Driver_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Pines.ucf -p xc6slx9-csg324-3 Driver_VGA.ngc Driver_VGA.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Driver_VGA_map.ncd Driver_VGA.ngd Driver_VGA.pcf 
+par -w -intstyle ise -ol high -mt off Driver_VGA_map.ncd Driver_VGA.ncd Driver_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Driver_VGA.twx Driver_VGA.ncd -o Driver_VGA.twr Driver_VGA.pcf -ucf Pines.ucf 
+bitgen -intstyle ise -f Driver_VGA.ut Driver_VGA.ncd 
+xst -intstyle ise -ifn "C:/Users/pc/Downloads/VersionFinal/Driver_VGA.xst" -ofn "C:/Users/pc/Downloads/VersionFinal/Driver_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Pines.ucf -p xc6slx9-csg324-3 Driver_VGA.ngc Driver_VGA.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Driver_VGA_map.ncd Driver_VGA.ngd Driver_VGA.pcf 
+par -w -intstyle ise -ol high -mt off Driver_VGA_map.ncd Driver_VGA.ncd Driver_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Driver_VGA.twx Driver_VGA.ncd -o Driver_VGA.twr Driver_VGA.pcf -ucf Pines.ucf 
+bitgen -intstyle ise -f Driver_VGA.ut Driver_VGA.ncd 
+xst -intstyle ise -ifn "C:/Users/pc/Downloads/VersionFinal/Driver_VGA.xst" -ofn "C:/Users/pc/Downloads/VersionFinal/Driver_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Pines.ucf -p xc6slx9-csg324-3 Driver_VGA.ngc Driver_VGA.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Driver_VGA_map.ncd Driver_VGA.ngd Driver_VGA.pcf 
+par -w -intstyle ise -ol high -mt off Driver_VGA_map.ncd Driver_VGA.ncd Driver_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Driver_VGA.twx Driver_VGA.ncd -o Driver_VGA.twr Driver_VGA.pcf -ucf Pines.ucf 
+bitgen -intstyle ise -f Driver_VGA.ut Driver_VGA.ncd 
+xst -intstyle ise -ifn "C:/Users/Hans-PC/Desktop/VersionFinal/Driver_VGA.xst" -ofn "C:/Users/Hans-PC/Desktop/VersionFinal/Driver_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Pines.ucf -p xc6slx9-csg324-3 Driver_VGA.ngc Driver_VGA.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Driver_VGA_map.ncd Driver_VGA.ngd Driver_VGA.pcf 
+par -w -intstyle ise -ol high -mt off Driver_VGA_map.ncd Driver_VGA.ncd Driver_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Driver_VGA.twx Driver_VGA.ncd -o Driver_VGA.twr Driver_VGA.pcf -ucf Pines.ucf 
+bitgen -intstyle ise -f Driver_VGA.ut Driver_VGA.ncd 
+xst -intstyle ise -ifn "C:/Users/Hans/Desktop/VersionFinal/Driver_VGA.xst" -ofn "C:/Users/Hans/Desktop/VersionFinal/Driver_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Pines.ucf -p xc6slx9-csg324-3 Driver_VGA.ngc Driver_VGA.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Driver_VGA_map.ncd Driver_VGA.ngd Driver_VGA.pcf 
+par -w -intstyle ise -ol high -mt off Driver_VGA_map.ncd Driver_VGA.ncd Driver_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Driver_VGA.twx Driver_VGA.ncd -o Driver_VGA.twr Driver_VGA.pcf -ucf Pines.ucf 
+bitgen -intstyle ise -f Driver_VGA.ut Driver_VGA.ncd 

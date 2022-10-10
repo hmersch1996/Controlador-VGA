@@ -1,0 +1,590 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.41 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.41 secs
+ 
+--> Reading design: Driver_VGA.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Driver_VGA.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Driver_VGA"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-csg324
+
+---- Source Options
+Top Module Name                    : Driver_VGA
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Hans\Desktop\VersionFinal\Descripcion.vhd" into library work
+Parsing entity <Driver_VGA>.
+Parsing architecture <Behavioral> of entity <driver_vga>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Driver_VGA> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "C:\Users\Hans\Desktop\VersionFinal\Descripcion.vhd" Line 377: clk25 should be on the sensitivity list of the process
+WARNING:HDLCompiler:634 - "C:\Users\Hans\Desktop\VersionFinal\Descripcion.vhd" Line 37: Net <Matriz[160][159]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Driver_VGA>.
+    Related source file is "C:\Users\Hans\Desktop\VersionFinal\Descripcion.vhd".
+WARNING:Xst:653 - Signal <Matriz<160>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 1-bit register for signal <HSYNC>.
+    Found 1-bit register for signal <VSYNC>.
+    Found 1-bit register for signal <videoOn>.
+    Found 32-bit register for signal <hpos>.
+    Found 32-bit register for signal <vpos>.
+    Found 3-bit register for signal <Red>.
+    Found 3-bit register for signal <Green>.
+    Found 3-bit register for signal <Blue>.
+    Found 1-bit register for signal <CLK25>.
+    Found 1-bit register for signal <CLK50>.
+    Found 32-bit adder for signal <hpos[31]_GND_6_o_add_225_OUT> created at line 300.
+    Found 32-bit adder for signal <vpos[31]_GND_6_o_add_230_OUT> created at line 315.
+    Found 31-bit adder for signal <n0345[30:0]> created at line 394.
+    Found 30-bit adder for signal <n0346[29:0]> created at line 387.
+    Found 6-bit subtractor for signal <vpos[31]_GND_6_o_sub_252_OUT<5:0>> created at line 387.
+    Found 8-bit subtractor for signal <vpos[31]_GND_6_o_sub_258_OUT<7:0>> created at line 394.
+    Found 8-bit subtractor for signal <hpos[31]_GND_6_o_sub_260_OUT<7:0>> created at line 394.
+    Found 64x141-bit Read Only RAM for signal <_n1816>
+    Found 32-bit comparator lessequal for signal <n0150> created at line 327
+    Found 32-bit comparator greater for signal <hpos[31]_GND_6_o_LessThan_236_o> created at line 327
+    Found 32-bit comparator lessequal for signal <n0155> created at line 341
+    Found 32-bit comparator greater for signal <vpos[31]_GND_6_o_LessThan_238_o> created at line 341
+    Found 32-bit comparator lessequal for signal <n0160> created at line 355
+    Found 32-bit comparator lessequal for signal <n0162> created at line 355
+    Found 32-bit comparator lessequal for signal <n0171> created at line 385
+    Found 32-bit comparator greater for signal <GND_6_o_hpos[31]_LessThan_249_o> created at line 385
+    Found 32-bit comparator greater for signal <vpos[31]_GND_6_o_LessThan_250_o> created at line 385
+    Found 32-bit comparator greater for signal <GND_6_o_vpos[31]_LessThan_251_o> created at line 385
+    Summary:
+	inferred   1 RAM(s).
+	inferred   7 Adder/Subtractor(s).
+	inferred  78 D-type flip-flop(s).
+	inferred  10 Comparator(s).
+	inferred 244 Multiplexer(s).
+Unit <Driver_VGA> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 64x141-bit single-port Read Only RAM                  : 1
+# Adders/Subtractors                                   : 7
+ 30-bit adder                                          : 1
+ 31-bit adder                                          : 1
+ 32-bit adder                                          : 2
+ 6-bit subtractor                                      : 1
+ 8-bit subtractor                                      : 2
+# Registers                                            : 10
+ 1-bit register                                        : 5
+ 3-bit register                                        : 3
+ 32-bit register                                       : 2
+# Comparators                                          : 10
+ 32-bit comparator greater                             : 5
+ 32-bit comparator lessequal                           : 5
+# Multiplexers                                         : 244
+ 1-bit 2-to-1 multiplexer                              : 237
+ 3-bit 2-to-1 multiplexer                              : 5
+ 32-bit 2-to-1 multiplexer                             : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Driver_VGA>.
+The following registers are absorbed into counter <hpos>: 1 register on signal <hpos>.
+The following registers are absorbed into counter <vpos>: 1 register on signal <vpos>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n1816> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 141-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <vpos[31]_GND_6_o_sub_252_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <Driver_VGA> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 64x141-bit single-port distributed Read Only RAM      : 1
+# Adders/Subtractors                                   : 5
+ 6-bit subtractor                                      : 1
+ 8-bit adder                                           : 1
+ 8-bit subtractor                                      : 2
+ 9-bit adder                                           : 1
+# Counters                                             : 2
+ 32-bit up counter                                     : 2
+# Registers                                            : 14
+ Flip-Flops                                            : 14
+# Comparators                                          : 10
+ 32-bit comparator greater                             : 5
+ 32-bit comparator lessequal                           : 5
+# Multiplexers                                         : 101
+ 1-bit 2-to-1 multiplexer                              : 96
+ 3-bit 2-to-1 multiplexer                              : 5
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <Blue_0> in Unit <Driver_VGA> is equivalent to the following 2 FFs/Latches, which will be removed : <Blue_1> <Blue_2> 
+INFO:Xst:2261 - The FF/Latch <Green_0> in Unit <Driver_VGA> is equivalent to the following 2 FFs/Latches, which will be removed : <Green_1> <Green_2> 
+INFO:Xst:2261 - The FF/Latch <Red_0> in Unit <Driver_VGA> is equivalent to the following 2 FFs/Latches, which will be removed : <Red_1> <Red_2> 
+
+Optimizing unit <Driver_VGA> ...
+WARNING:Xst:1293 - FF/Latch <vpos_10> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vpos_11> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vpos_12> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vpos_13> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vpos_14> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vpos_15> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vpos_16> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vpos_17> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vpos_18> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vpos_19> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vpos_20> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vpos_21> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vpos_22> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vpos_23> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vpos_24> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vpos_25> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vpos_26> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vpos_27> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vpos_28> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vpos_29> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vpos_30> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vpos_31> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <hpos_10> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <hpos_11> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <hpos_12> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <hpos_13> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <hpos_14> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <hpos_15> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <hpos_16> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <hpos_17> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <hpos_18> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <hpos_19> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <hpos_20> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <hpos_21> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <hpos_22> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <hpos_23> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <hpos_24> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <hpos_25> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <hpos_26> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <hpos_27> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <hpos_28> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <hpos_29> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <hpos_30> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <hpos_31> has a constant value of 0 in block <Driver_VGA>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Driver_VGA, actual ratio is 24.
+FlipFlop hpos_1 has been replicated 3 time(s)
+FlipFlop hpos_2 has been replicated 3 time(s)
+FlipFlop hpos_3 has been replicated 5 time(s)
+FlipFlop hpos_4 has been replicated 4 time(s)
+FlipFlop hpos_5 has been replicated 3 time(s)
+FlipFlop hpos_6 has been replicated 3 time(s)
+FlipFlop hpos_7 has been replicated 3 time(s)
+FlipFlop hpos_8 has been replicated 2 time(s)
+FlipFlop hpos_9 has been replicated 2 time(s)
+FlipFlop vpos_2 has been replicated 3 time(s)
+FlipFlop vpos_3 has been replicated 3 time(s)
+FlipFlop vpos_4 has been replicated 4 time(s)
+FlipFlop vpos_5 has been replicated 5 time(s)
+FlipFlop vpos_6 has been replicated 6 time(s)
+FlipFlop vpos_7 has been replicated 7 time(s)
+FlipFlop vpos_8 has been replicated 5 time(s)
+FlipFlop vpos_9 has been replicated 5 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 94
+ Flip-Flops                                            : 94
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Driver_VGA.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1581
+#      GND                         : 1
+#      INV                         : 8
+#      LUT1                        : 20
+#      LUT2                        : 82
+#      LUT3                        : 115
+#      LUT4                        : 74
+#      LUT5                        : 282
+#      LUT6                        : 851
+#      MUXCY                       : 72
+#      MUXF7                       : 55
+#      VCC                         : 1
+#      XORCY                       : 20
+# FlipFlops/Latches                : 94
+#      FD                          : 2
+#      FDC                         : 41
+#      FDCE                        : 51
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 13
+#      IBUF                        : 2
+#      OBUF                        : 11
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              94  out of  11440     0%  
+ Number of Slice LUTs:                 1432  out of   5720    25%  
+    Number used as Logic:              1432  out of   5720    25%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1508
+   Number with an unused Flip Flop:    1414  out of   1508    93%  
+   Number with an unused LUT:            76  out of   1508     5%  
+   Number of fully used LUT-FF pairs:    18  out of   1508     1%  
+   Number of unique control sets:         5
+
+IO Utilization: 
+ Number of IOs:                          14
+ Number of bonded IOBs:                  14  out of    200     7%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 1     |
+CLK50                              | NONE(CLK25)            | 1     |
+CLK25                              | BUFG                   | 92    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 11.457ns (Maximum Frequency: 87.286MHz)
+   Minimum input arrival time before clock: 4.743ns
+   Maximum output required time after clock: 3.668ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 1.950ns (frequency: 512.794MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.950ns (Levels of Logic = 1)
+  Source:            CLK50 (FF)
+  Destination:       CLK50 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: CLK50 to CLK50
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.616  CLK50 (CLK50)
+     INV:I->O              1   0.206   0.579  CLK50_INV_1_o1_INV_0 (CLK50_INV_1_o)
+     FD:D                      0.102          CLK50
+    ----------------------------------------
+    Total                      1.950ns (0.755ns logic, 1.195ns route)
+                                       (38.7% logic, 61.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK50'
+  Clock period: 1.913ns (frequency: 522.821MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.913ns (Levels of Logic = 1)
+  Source:            CLK25 (FF)
+  Destination:       CLK25 (FF)
+  Source Clock:      CLK50 rising
+  Destination Clock: CLK50 rising
+
+  Data Path: CLK25 to CLK25
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.579  CLK25 (CLK25)
+     INV:I->O              1   0.206   0.579  CLK25_INV_2_o1_INV_0 (CLK25_INV_2_o)
+     FD:D                      0.102          CLK25
+    ----------------------------------------
+    Total                      1.913ns (0.755ns logic, 1.158ns route)
+                                       (39.5% logic, 60.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK25'
+  Clock period: 11.457ns (frequency: 87.286MHz)
+  Total number of paths / destination ports: 153224 / 143
+-------------------------------------------------------------------------
+Delay:               11.457ns (Levels of Logic = 11)
+  Source:            vpos_5_1 (FF)
+  Destination:       Blue_0 (FF)
+  Source Clock:      CLK25 rising
+  Destination Clock: CLK25 rising
+
+  Data Path: vpos_5_1 to Blue_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             4   0.447   0.788  vpos_5_1 (vpos_5_1)
+     LUT2:I0->O          141   0.203   2.213  Msub_vpos[31]_GND_6_o_sub_252_OUT<5:0>_xor<3>11 (vpos[31]_GND_6_o_sub_252_OUT<3>)
+     LUT6:I3->O            1   0.205   0.580  Mram__n1816681 (_n1816<72>)
+     LUT6:I5->O            2   0.205   0.617  GND_6_o_hpos[31]_mux_266_OUT<0>72 (GND_6_o_hpos[31]_mux_266_OUT<0>72)
+     LUT5:I4->O            1   0.205   0.580  GND_6_o_hpos[31]_mux_266_OUT<0>90_SW1_SW0 (N736)
+     LUT6:I5->O            2   0.205   0.616  GND_6_o_hpos[31]_mux_266_OUT<0>90_SW1 (N84)
+     MUXF7:S->O            1   0.148   0.580  GND_6_o_hpos[31]_mux_266_OUT<0>91_SW0 (N168)
+     LUT6:I5->O            1   0.205   0.684  GND_6_o_hpos[31]_mux_266_OUT<0>92_SW0 (N186)
+     LUT6:I4->O            1   0.203   0.580  GND_6_o_hpos[31]_mux_266_OUT<0>102_SW0 (N305)
+     LUT6:I5->O            3   0.205   0.651  GND_6_o_hpos[31]_mux_266_OUT<0>113 (GND_6_o_hpos[31]_mux_266_OUT<0>114)
+     LUT6:I5->O            1   0.205   0.827  GND_6_o_hpos[31]_mux_266_OUT<0>144_SW6 (N272)
+     LUT6:I2->O            1   0.203   0.000  GND_6_o_hpos[31]_mux_266_OUT<0>144 (GND_6_o_hpos[31]_mux_266_OUT<0>)
+     FDCE:D                    0.102          Blue_0
+    ----------------------------------------
+    Total                     11.457ns (2.741ns logic, 8.716ns route)
+                                       (23.9% logic, 76.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK25'
+  Total number of paths / destination ports: 103 / 98
+-------------------------------------------------------------------------
+Offset:              4.743ns (Levels of Logic = 4)
+  Source:            SELECTOR (PAD)
+  Destination:       Blue_0 (FF)
+  Destination Clock: CLK25 rising
+
+  Data Path: SELECTOR to Blue_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             9   1.222   1.174  SELECTOR_IBUF (SELECTOR_IBUF)
+     LUT5:I0->O            1   0.203   0.808  GND_6_o_hpos[31]_mux_266_OUT<0>137_SW5 (N451)
+     LUT6:I3->O            1   0.205   0.827  GND_6_o_hpos[31]_mux_266_OUT<0>144_SW6 (N272)
+     LUT6:I2->O            1   0.203   0.000  GND_6_o_hpos[31]_mux_266_OUT<0>144 (GND_6_o_hpos[31]_mux_266_OUT<0>)
+     FDCE:D                    0.102          Blue_0
+    ----------------------------------------
+    Total                      4.743ns (1.935ns logic, 2.808ns route)
+                                       (40.8% logic, 59.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK25'
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Offset:              3.668ns (Levels of Logic = 1)
+  Source:            Red_0 (FF)
+  Destination:       Red<2> (PAD)
+  Source Clock:      CLK25 rising
+
+  Data Path: Red_0 to Red<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.447   0.650  Red_0 (Red_0)
+     OBUF:I->O                 2.571          Red_2_OBUF (Red<2>)
+    ----------------------------------------
+    Total                      3.668ns (3.018ns logic, 0.650ns route)
+                                       (82.3% logic, 17.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    1.950|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CLK25
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK25          |   11.457|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CLK50
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK50          |    1.913|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 1127.00 secs
+Total CPU time to Xst completion: 1126.63 secs
+ 
+--> 
+
+Total memory usage is 5042456 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   47 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+
